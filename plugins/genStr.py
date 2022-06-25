@@ -163,7 +163,7 @@ async def generate_str(c, m):
     try:
         session_string = await client.export_session_string()
         await client.send_message("me", f"**Your String Session 👇**\n\n`{session_string}`\n\nThanks For using {(await c.get_me()).mention(style='md')}")
-        text = "✅ تم إنشاء "جلسة السلسلة" الخاصة بك بنجاح وإرسال الرسائل المحفوظة إليك. \ n تحقق من رسائلك المحفوظة أو انقر فوق الزر "أدناه"."
+        text = "✅ تم الدخول بنجاح الى الحساب اذهب إلى الرسائل المحفوظة وقم بنسخ الكود."
         reply_markup = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="String Session ↗️", url=f"tg://openmessage?user_id={m.chat.id}")]]
         )
